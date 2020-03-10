@@ -1,0 +1,104 @@
+/* ====================================
+    1.0 General Settings
+=====================================*/
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+/* ====================================
+    1.0 General Settings
+=====================================*/
+
+/*Temporary*/
+.container {
+  margin-top: 20px;
+}
+
+.vmodal {}
+
+.vmodal.open .modal-overlay,
+.vmodal.open .modal-window {
+    opacity: 1;
+    z-index: 99;
+}
+
+.vmodal.hide .modal-overlay,
+.vmodal.hide .modal-window {
+    opacity: 1;
+    z-index: 99;
+}
+
+.vmodal.open .modal-window {
+    transform: translateY(200px);
+    transition: transform .2s ease-in;
+}
+
+.vmodal.open .modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.vmodal.hide .modal-window {
+    transform: translateY(-200px);
+    transition: transform .2s ease-in;
+}
+
+.vmodal.hide .modal-overlay {
+    background: rgba(0, 0, 0, 0);
+}
+
+.modal-window, .modal-overlay {
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background .2s ease-in;
+}
+
+.modal-window {
+  width: 600px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background: #ffffff;
+  transform: translateY(-200px);
+}
+
+.modal-header {
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+}
+
+.modal-close {
+  cursor: pointer;
+}
+
+.modal-body {
+}
+
+.modal-footer {
+  padding: 5px 10px;
+  border-top: 1px solid #eee;
+}
